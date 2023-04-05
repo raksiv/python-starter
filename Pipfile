@@ -5,6 +5,7 @@ name = "python starter"
 
 [packages]
 nitric = "==0.8.2"
+common = {editable = true, path = "./common"}
 
 [scripts]
 dev = "watchmedo auto-restart -p '*.py' -R python index.py --"
