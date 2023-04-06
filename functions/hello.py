@@ -1,11 +1,12 @@
 from nitric.application import Nitric
-from nitric.resources import api, collection, ApiOptions
+from nitric.resources import api, ApiOptions
 
-from middle import runfirst
+from middle import run_first
 
 publicApi = api("public", ApiOptions(
-    middleware=[runfirst],
+    middleware=[run_first],
 ))
+
 
 @publicApi.get("/profiles")
 async def get_profiles(ctx):
